@@ -8,13 +8,33 @@ const game = (function () {
 
     };
 
-    function play(location, playerMark) {
-        gameBoard[location] = playerMark;
-        printBoard();
+    function checkGameStatus() {
+
     };
-    return { printBoard, play };
+
+    return { gameBoard, printBoard };
 })();
 
+function player(playerName, playerMark) {
+    let score = 0;
+    const playerMoves = [];
+    function inceraseScore() {
+        score++;
+    }
 
+    function getScore() {
+        return score;
+    };
 
+    function play(location) {
+        game.gameBoard[location] = playerMark;
+        playerMoves.push(location);
+        game.printBoard();
+    };
+
+    return { play, getScore, inceraseScore };
+};
+
+const p1 = player("p1", "x");
+const p2 = player("p2", "o");
 game.printBoard();
