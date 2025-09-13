@@ -1,0 +1,52 @@
+ *,
+ *:before,
+ *:after {
+     box-sizing: border-box;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ html {
+     font-size: 62.5%
+ }
+
+ .nav {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #720026;
+     color: #ff9b54;
+     height: 10vh;
+     font-size: 4.8rem;
+     font-weight: bold;
+ }
+
+ .container {
+     background-color: #4f000b;
+     height: 90vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .tic-tac-toe {
+     display: grid;
+     grid-template-columns: 200px 200px 200px;
+     gap: 1.6rem;
+
+ }
+
+ .box {
+     height: 200px;
+     width: 200px;
+     background-color: #720026;
+     border: 1px solid #ce4257;
+ }
+
+ .box:hover {
+     border: 1px solid #ff9b54;
+     cursor: pointer;
+ }
